@@ -21,4 +21,4 @@ jobs:
         maxLength: 7
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build . --file Containerfile --tag update_dh_dns:"${{ steps.truncatedString.output.string }}"
+      run: docker build . --file Containerfile --tag update_dh_dns:"${{ steps.truncatedString.outputs.string }}"
