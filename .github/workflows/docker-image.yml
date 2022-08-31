@@ -23,4 +23,4 @@ jobs:
     - name: Build the Docker image
       run: docker build . --file Containerfile --tag update_dh_dns:"${{ steps.truncatedString.outputs.string }}"
     - name: Login to Quay.io
-      run: docker login -u="hyclak+githubcicd" -p="${{ QUAY_IO_TOKEN }}" quay.io
+      run: docker login -u="hyclak+githubcicd" -p="${{ secrets.QUAY_IO_TOKEN }}" quay.io
