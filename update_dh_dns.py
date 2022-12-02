@@ -53,7 +53,7 @@ def main():
         print("Please define the DH_HOSTNAME environment variable with a valid hostname.")
         sys.exit(1)
 
-    print(f"Validating IP at {datetime.now.strftime('%m/%d/%Y %H:%M:%S')}")
+    print(f"Validating IP at {datetime.now().strftime('%m/%d/%Y %H:%M:%S')}")
 
     external_ip = get_current_ip()
     print(f"Updating IP to {external_ip}")
