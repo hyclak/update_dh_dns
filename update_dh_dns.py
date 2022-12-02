@@ -4,6 +4,7 @@
 import os
 import re
 import sys
+from datetime import datetime
 from urllib.request import urlopen
 
 APIURL = "https://api.dreamhost.com"
@@ -51,6 +52,8 @@ def main():
     except KeyError():
         print("Please define the DH_HOSTNAME environment variable with a valid hostname.")
         sys.exit(1)
+
+    print(f"Validating IP at {datetime.now.strftime('%m/%d/%Y %H:%M:%S')}")
 
     external_ip = get_current_ip()
     print(f"Updating IP to {external_ip}")
