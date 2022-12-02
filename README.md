@@ -16,3 +16,4 @@ Due to how DreamHost's DNS API works, the following steps are taken:
 
 1. `DH_API_KEY` Environment Variable containing the API Key.
 2. `DH_HOSTNAME` Environment Variable containing the hostname that should be updated.
+
