@@ -12,7 +12,7 @@ def get_current_ip():
     """ Get external IP address from api.ipify.org """
     with urlopen('https://api.ipify.org') as result:
         current_ip = result.read().decode('utf8')
- return str(current_ip)
+        return str(current_ip)
 
 def update_dreamhost_a_record(key, record, new_ip):
     """ Update A record via DreamHost DNS API """
