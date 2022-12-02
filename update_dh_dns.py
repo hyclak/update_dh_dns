@@ -36,7 +36,7 @@ def update_dreamhost_a_record(key, record, new_ip):
         # Finally, add Record
         add_url = f"{APIURL}/?key={key}&cmd=dns-add_record&record={record}&type=A&value={new_ip}"
         with urlopen(add_url) as result:
-            print(f"Adding new IP ({new_ip}): {result.read().decode('uff8')}")
+            print(f"Adding new IP ({new_ip}): {result.read().decode('utf8')}")
 
 def main():
     """ Initiate Update """
